@@ -66,14 +66,14 @@ if (searchButton != undefined){ // Проверка существования �
             location.href = "https://yandex.ru/";
         }
     }, 1000);
-} else{
-    if(getRandom(1, 11) > 8 ) setTimeout(() => { location.href = "https://yandex.ru/" }, 3000); // С вероятностью в 20% мы переходим на сайт yandex
+} else {
+    if(getRandom(1, 11) > 8 ) setTimeout(() => { location.href = "https://yandex.ru/"; }, 3000); // С вероятностью в 20% мы переходим на сайт yandex
     let links = document.links; //Собираем коллекцию всех ссылок сайта
     setInterval(()=>{
         let index = getRandom(0, links.length); // Индекс из массива links
         let link = links[index]; // Выбор ссылки по индексу из массива links
         if (link.href.includes(location.hostname)) { // Проверяем что ссылка ведёт нас на тот же сайт на котором мы находимся
-            setTimeout(()=>{ link.click(); }, 3000);
+            setTimeout(() =>{ link.click(); }, 3000);
         }
     },5000);
 }
